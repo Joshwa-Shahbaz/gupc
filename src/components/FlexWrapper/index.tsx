@@ -5,15 +5,23 @@ import { FLexWrapperStyled } from "./styled";
 type FlexWarpperProps = {
   justifyContent?: string;
   children: ReactNode;
+  FlexDirection?: string;
+  gap?: number;
 };
 
 const FlexWrapper: React.FC<FlexWarpperProps> = ({
   justifyContent,
   children,
+  FlexDirection,
+  gap,
 }) => {
   return (
     <div>
-      <FLexWrapperStyled justifyContent={justifyContent}>
+      <FLexWrapperStyled
+        justifyContent={justifyContent}
+        FlexDirection={FlexDirection}
+        gap={gap}
+      >
         {children}
       </FLexWrapperStyled>
     </div>

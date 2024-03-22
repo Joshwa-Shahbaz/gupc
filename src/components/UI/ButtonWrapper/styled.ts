@@ -5,7 +5,7 @@ export const ButtonWrapperStyled = styled.button<{
   BorderRadius?: number;
 }>`
   background-color: ${({ backgroundColor }) =>
-    backgroundColor ? backgroundColor : "green"};
+    backgroundColor ? backgroundColor : "#F2C274"};
   font-size: 18px;
   font-weight: 500;
   color: #fff;
@@ -17,7 +17,7 @@ export const ButtonWrapperStyled = styled.button<{
   justify-content: center;
   border-radius: ${({ BorderRadius }) =>
     BorderRadius ? `${BorderRadius}px` : "0px"};
-  padding: 16px;
+  padding: 12px 16px;
   transition: 0.3s ease-in-out;
 
   &:hover {

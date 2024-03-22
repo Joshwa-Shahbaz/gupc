@@ -1,6 +1,11 @@
-import Hero from "@/container/Hero";
-import TopicList from "@/container/TopicsList";
+import Banner from "@/container/Banner";
+import MainPage from "@/container/MainPage";
 
 export default function Home() {
-  return <TopicList />;
+  return (
+    <>
+      <MainPage />
+      {/* <Banner /> */}
+    </>
+  );
 }

@@ -20,8 +20,4 @@ export const ContainerWrapperStyled = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoints.extraLarge}px) {
     padding: 0 100px;
   }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    padding: 0 180px;
-  }
 `;

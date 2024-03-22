@@ -12,7 +12,7 @@ import ButtonWrapper from "@/components/UI/ButtonWrapper";
 import { CgBmw } from "react-icons/cg";
 import VectorSvg from "@/components/UI/Vector";
 
-const Hero = () => {
+const Banner = () => {
   return (
     <FlexWrapper>
       <FlexLeftDivStyled>
@@ -43,4 +43,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Banner;
