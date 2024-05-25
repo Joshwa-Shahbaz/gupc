@@ -7,10 +7,10 @@ export const MainWrapperStyled = styled.div`
     margin-top: 60px;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.extraLarge}px) {
-    margin-top: 60px;
+    margin-top: 40px;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 `;
 
@@ -21,18 +21,27 @@ export const LeftDivStyled = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    width: 40%;
+    flex: 1;
     margin-bottom: 0px;
   }
 `;
 
 export const RightDivStyled = styled.div`
   width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    flex: 1;
+    width: 45%;
   }
+`;
+
+export const ImageStyled = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;

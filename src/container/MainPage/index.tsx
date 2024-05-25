@@ -1,17 +1,29 @@
 import ContainerWrapper from "@/components/ContainerWrapper";
 import FlexWrapper from "@/components/FlexWrapper";
 import React from "react";
-import { LeftDivStyled, MainWrapperStyled, RightDivStyled } from "./styled";
+import {
+  ImageStyled,
+  LeftDivStyled,
+  MainWrapperStyled,
+  RightDivStyled,
+} from "./styled";
 import ButtonWrapper from "@/components/UI/ButtonWrapper";
 import TypewriterEffect from "@/components/UI/TypeEffect";
 import { RxBorderDashed } from "react-icons/rx";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 const MainPage = () => {
   const texts = [
     "I am Joshwa Shahbaz",
-    "I am Frontend Developer",
+    "I'm Frontend Developer",
     "Have a great day!",
   ];
+
   return (
     <MainWrapperStyled>
       <ContainerWrapper>
@@ -58,23 +70,35 @@ const MainPage = () => {
                 Download CV
               </ButtonWrapper>
             </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "25px",
+                marginTop: "25px",
+              }}
+            >
+              <div>
+                <FaFacebookF size={"25px"} />
+              </div>
+              <div>
+                <FaInstagram size={"25px"} />
+              </div>
+              <div>
+                <FaGithub size={"25px"} />
+              </div>
+              <div>
+                <FaLinkedinIn size={"25px"} />
+              </div>
+            </div>
           </LeftDivStyled>
           <RightDivStyled>
-            <img src="/images/HeroPlane.png" alt="/images/HeroPlane.png" />
+            <ImageStyled
+              src="/images/Content structure-amico.png"
+              alt="/images/HeroPlane.png"
+            />
           </RightDivStyled>
         </FlexWrapper>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "25px",
-          }}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
       </ContainerWrapper>
     </MainWrapperStyled>
   );

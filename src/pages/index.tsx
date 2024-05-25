@@ -1,11 +1,11 @@
-import Banner from "@/container/Banner";
+import ProgressBar from "@/components/UI/ProgressBar";
 import MainPage from "@/container/MainPage";
 
 export default function Home() {
   return (
     <>
       <MainPage />
-      {/* <Banner /> */}
+      <ProgressBar name="JavaScript" level="95%" />
     </>
   );
 }

@@ -4,8 +4,8 @@ const VectorSvg = () => {
   return (
     <div>
       <svg
-        width="108"
-        height="102"
+        width="100%"
+        height="100%"
         viewBox="0 0 108 102"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +25,8 @@ const VectorSvg = () => {
             y2="-38.1534"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#008ECC" />
-            <stop offset="1" stop-color="#87ceeb" />
+            <stop stop-color="orange" />
+            <stop offset="1" stop-color="orange" />
           </linearGradient>
         </defs>
       </svg>
