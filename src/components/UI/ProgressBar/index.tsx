@@ -1,30 +1,42 @@
-import React, { useEffect, useState } from "react";
-import {
-  SkillBarWrapper,
-  SkillContainer,
-  SkillLevel,
-  SkillName,
-} from "./styled";
+import React from "react";
+import ContainerWrapper from "@/components/ContainerWrapper";
+import { ColStyled, CustomProgress, RowStyled, TitleSyled } from "./styled";
 
 type ProgressBarProps = {
-  name: string;
-  level: string | number;
+  data: {
+    Percentage: number;
+    Title: string;
+  }[];
 };
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ name, level }) => {
-  const [width, setWidth] = useState("0%");
+const ProgressBar: React.FC<ProgressBarProps> = ({ data }) => {
+  const twoColors = {
+    "0%": "#F2C274",
+    "100%": "#87d068",
+  };
+  const conicColors = {
+    "0%": "#F2C274",
+    "50%": "#ffe58f",
+    "100%": "#ffccc7",
+  };
 
-  useEffect(() => {
-    // Set width to the given level after component mounts
-    setWidth(level);
-  }, [level]);
   return (
-    <SkillContainer>
-      <SkillName>{name}</SkillName>
-      <SkillBarWrapper>
-        <SkillLevel level={level}>{level}</SkillLevel>
-      </SkillBarWrapper>
-    </SkillContainer>
+    <ContainerWrapper>
+      <RowStyled>
+        {data.map((item, index) => (
+          <ColStyled key={index}>
+            <TitleSyled>{item.Title}</TitleSyled>
+            <CustomProgress
+              percent={item.Percentage}
+              strokeColor={twoColors}
+              format={() => (
+                <span style={{ color: "white" }}>{item.Percentage}%</span>
+              )}
+            />
+          </ColStyled>
+        ))}
+      </RowStyled>
+    </ContainerWrapper>
   );
 };
 

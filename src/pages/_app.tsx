@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Nabvar";
 import theme from "@/config/theme";
 import "@/styles/globals.css";
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   );
 }

@@ -1,31 +1,38 @@
-import React from "react";
 import styled from "styled-components";
+import { Progress } from "antd";
 
-export const SkillContainer = styled.div`
-  margin-bottom: 20px;
-`;
-
-export const SkillName = styled.h3`
-  margin: 5px 0;
-`;
-
-export const SkillBarWrapper = styled.div`
-  width: 100%;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-`;
-
-export const SkillLevel = styled.div<{
-  level: string | number;
-}>`
-  text-align: right;
-  padding: 5px;
-  color: #fff;
-  background-color: #007bff; /* Change color as needed */
-  border-radius: 5px;
-  width: 0; /* Start from zero width */
-  transition: width 1s ease; /* Transition effect */
-  ${SkillContainer}:hover & {
-    width: ${(props) => props.level};
+export const CustomProgress = styled(Progress)`
+  .ant-progress-bg {
+    background-color: red;
   }
+  .ant-progress-inner {
+    background-color: #36454f;
+  }
+  .ant-progress-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+`;
+
+export const RowStyled = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 120px 60px;
+`;
+
+export const ColStyled = styled.div`
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const TitleSyled = styled.div`
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
 `;

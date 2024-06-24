@@ -1,11 +1,15 @@
 import ProgressBar from "@/components/UI/ProgressBar";
+import AboutMe from "@/container/About";
+import Gallery from "@/container/Gallery";
 import MainPage from "@/container/MainPage";
 
 export default function Home() {
   return (
     <>
       <MainPage />
-      <ProgressBar name="JavaScript" level="95%" />
+      <AboutMe />
+      <Gallery />
+      {/* <ProgressBar /> */}
     </>
   );
 }

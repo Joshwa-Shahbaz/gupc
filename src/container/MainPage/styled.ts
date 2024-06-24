@@ -10,7 +10,7 @@ export const MainWrapperStyled = styled.div`
     margin-top: 40px;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    margin-top: 80px;
+    margin-top: 120px;
   }
 `;
 
@@ -41,7 +41,7 @@ export const RightDivStyled = styled.div`
 `;
 
 export const ImageStyled = styled.img`
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: contain;
 `;
