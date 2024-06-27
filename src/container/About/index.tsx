@@ -1,6 +1,7 @@
 import ProgressBar from "@/components/UI/ProgressBar";
+import Image from "next/image";
 import React from "react";
-import { RowStyled } from "./styled";
+import { LeftColStyled, RightColStyled, RowStyled } from "./styled";
 import ContainerWrapper from "@/components/ContainerWrapper";
 
 const ProgressData = [
@@ -17,22 +18,28 @@ const AboutMe = () => {
     <ContainerWrapper as="section" id="about-me-section">
       <div style={{ marginTop: "120px" }}>
         <RowStyled>
-          <div
-            style={{
-              backgroundColor: "red",
-              width: "30%",
-              height: "390px",
-              borderRadius: "50%",
-            }}
-          ></div>
-          <div style={{ flex: "1" }}>
+          <LeftColStyled>
+            <Image
+              style={{
+                borderRadius: "50%",
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+              src="/images/giphy.webp"
+              alt="Profile Picture"
+              width={500}
+              height={500}
+            />
+          </LeftColStyled>
+          <RightColStyled>
             <p>
               I am an experienced Frontend Developer with a strong background in
               JavaScript and extensive experience with React, Next.js, and
               Gatsby. My skills also include working with modern CSS frameworks
               such as Tailwind CSS, SASS, Styled Components, and Material-UI.
             </p>
-          </div>
+          </RightColStyled>
         </RowStyled>
         <ProgressBar data={ProgressData} />
       </div>

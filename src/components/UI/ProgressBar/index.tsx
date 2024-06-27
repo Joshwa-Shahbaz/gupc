@@ -21,22 +21,20 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ data }) => {
   };
 
   return (
-    <ContainerWrapper>
-      <RowStyled>
-        {data.map((item, index) => (
-          <ColStyled key={index}>
-            <TitleSyled>{item.Title}</TitleSyled>
-            <CustomProgress
-              percent={item.Percentage}
-              strokeColor={twoColors}
-              format={() => (
-                <span style={{ color: "white" }}>{item.Percentage}%</span>
-              )}
-            />
-          </ColStyled>
-        ))}
-      </RowStyled>
-    </ContainerWrapper>
+    <RowStyled>
+      {data.map((item, index) => (
+        <ColStyled key={index}>
+          <TitleSyled>{item.Title}</TitleSyled>
+          <CustomProgress
+            percent={item.Percentage}
+            strokeColor={twoColors}
+            format={() => (
+              <span style={{ color: "white" }}>{item.Percentage}%</span>
+            )}
+          />
+        </ColStyled>
+      ))}
+    </RowStyled>
   );
 };
 

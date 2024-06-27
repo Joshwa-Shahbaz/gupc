@@ -10,9 +10,10 @@ export const FLexWrapperStyled = styled.h1<{
     justifyContent ? justifyContent : "space-between"};
   flex-direction: ${({ FlexDirection }) =>
     FlexDirection ? FlexDirection : "column"};
-  gap: 10%;
+  gap: 80px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     flex-direction: row;
+    gap: 10%;
   }
 `;

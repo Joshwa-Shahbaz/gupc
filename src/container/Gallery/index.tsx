@@ -4,7 +4,7 @@ import { GalleryContainer, Image, ImageContainer } from "./styled";
 
 const Gallery = () => {
   return (
-    <ContainerWrapper>
+    <ContainerWrapper as="section">
       <GalleryContainer>
         <div>
           <Image

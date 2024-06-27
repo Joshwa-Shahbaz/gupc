@@ -14,7 +14,7 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
-  const [toggle, useToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
   const List = [
     {
       navHead: "About Me",
@@ -66,7 +66,7 @@ const Navbar = () => {
           <HiMiniBars3
             color="#F2C274"
             size={30}
-            onClick={() => useToggle(true)}
+            onClick={() => setToggle(true)}
           />
         </ToggleButtonWrapper>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
               <IoCloseSharp
                 size={30}
                 color="#fff"
-                onClick={() => useToggle(false)}
+                onClick={() => setToggle(false)}
               />
             </CloseButtonStyled>
           </MobileSizeNavbar>
