@@ -45,3 +45,14 @@ export const ImageStyled = styled.img`
   height: 100%;
   object-fit: contain;
 `;
+
+export const TypewriterWrapper = styled.div`
+  max-height: 90px;
+  /* height: 60px; */
+  display: flex;
+  /* padding: 10px 0; */
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+  }
+`;
