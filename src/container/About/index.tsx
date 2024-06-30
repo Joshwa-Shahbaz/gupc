@@ -45,7 +45,7 @@ const AboutMe = () => {
         <RowStyled>
           <LeftColStyled>
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5 }}
             >
@@ -66,7 +66,7 @@ const AboutMe = () => {
 
           <RightColStyled>
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5 }}
             >
