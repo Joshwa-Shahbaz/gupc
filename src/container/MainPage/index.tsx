@@ -1,6 +1,6 @@
 import ContainerWrapper from "@/components/ContainerWrapper";
 import FlexWrapper from "@/components/FlexWrapper";
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import {
   ImageStyled,
   LeftDivStyled,
@@ -24,6 +24,30 @@ const MainPage = () => {
     "I am Frontend Developer",
     "Have a great day!",
   ];
+
+  const [isInView, setIsInView] = useState(false);
+  const typewriterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (typewriterRef.current) {
+      observer.observe(typewriterRef.current);
+    }
+
+    return () => {
+      if (typewriterRef.current) {
+        observer.unobserve(typewriterRef.current);
+      }
+    };
+  }, [typewriterRef]);
 
   return (
     <MainWrapperStyled>
@@ -52,8 +76,12 @@ const MainPage = () => {
                   </p>
                 </div>
               </div>
-              <TypewriterWrapper>
-                <TypewriterEffect texts={texts} interval={150} />
+              <TypewriterWrapper ref={typewriterRef}>
+                <TypewriterEffect
+                  texts={texts}
+                  interval={150}
+                  start={isInView}
+                />
               </TypewriterWrapper>
             </div>
             <div>
