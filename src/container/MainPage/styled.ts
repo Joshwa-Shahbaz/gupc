@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 export const MainWrapperStyled = styled.div`
   margin-top: 40px;
@@ -40,7 +41,7 @@ export const RightDivStyled = styled.div`
   }
 `;
 
-export const ImageStyled = styled.img`
+export const ImageStyled = styled(Image)`
   width: 90%;
   height: 100%;
   object-fit: contain;

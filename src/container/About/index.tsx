@@ -26,7 +26,7 @@ const AboutMe = () => {
                 height: "100%",
                 objectFit: "contain",
               }}
-              src="/images/giphy.webp"
+              src="/images/1.jpg"
               alt="Profile Picture"
               width={500}
               height={500}
