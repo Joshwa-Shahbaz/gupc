@@ -1,31 +1,29 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, forwardRef } from "react";
 // styles
 import { FLexWrapperStyled } from "./styled";
 
-type FlexWarpperProps = {
+type FlexWrapperProps = {
   justifyContent?: string;
   children: ReactNode;
   FlexDirection?: string;
   gap?: number;
 };
 
-const FlexWrapper: React.FC<FlexWarpperProps> = ({
-  justifyContent,
-  children,
-  FlexDirection,
-  gap,
-}) => {
-  return (
-    <div>
+const FlexWrapper = forwardRef<HTMLDivElement, FlexWrapperProps>(
+  ({ justifyContent, children, FlexDirection, gap }, ref) => {
+    return (
       <FLexWrapperStyled
+        ref={ref}
         justifyContent={justifyContent}
         FlexDirection={FlexDirection}
         gap={gap}
       >
         {children}
       </FLexWrapperStyled>
-    </div>
-  );
-};
+    );
+  }
+);
+
+FlexWrapper.displayName = "FlexWrapper";
 
 export default FlexWrapper;

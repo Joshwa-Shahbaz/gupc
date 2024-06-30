@@ -10,6 +10,7 @@ import {
 } from "./styled";
 import ButtonWrapper from "@/components/UI/ButtonWrapper";
 import TypewriterEffect from "@/components/UI/TypeEffect";
+import { useRouter } from "next/router";
 import { RxBorderDashed } from "react-icons/rx";
 import {
   FaFacebookF,
@@ -27,7 +28,16 @@ const MainPage = () => {
   ];
 
   const [isInView, setIsInView] = useState(false);
-  const typewriterRef = useRef(null);
+  // const [height, setHeight] = useState<number>(0);
+  const typewriterRef = useRef<HTMLDivElement>(null);
+  // const mainContainer = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+
+  // useEffect(() => {
+  //   if (mainContainer.current) {
+  //     setHeight(mainContainer.current.offsetHeight);
+  //   }
+  // }, [router, height]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -140,18 +150,12 @@ const MainPage = () => {
             </motion.div>
           </LeftDivStyled>
           <RightDivStyled>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <ImageStyled
-                src="/images/2.jpg"
-                alt="/images/HeroPlane.png"
-                width={500}
-                height={500}
-              />
-            </motion.div>
+            <ImageStyled
+              src="/images/5.png"
+              alt="/images/HeroPlane.png"
+              width={500}
+              height={500}
+            />
           </RightDivStyled>
         </FlexWrapper>
       </ContainerWrapper>

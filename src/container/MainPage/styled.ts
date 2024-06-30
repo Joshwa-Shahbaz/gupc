@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const MainWrapperStyled = styled.div`
+export const MainWrapperStyled = styled.div<{
+  height?: number;
+}>`
   margin-top: 40px;
+  height: max-content;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     margin-top: 60px;
@@ -42,7 +45,7 @@ export const RightDivStyled = styled.div`
 `;
 
 export const ImageStyled = styled(Image)`
-  width: 90%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 `;
