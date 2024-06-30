@@ -17,6 +17,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const MainPage = () => {
   const texts = [
@@ -54,7 +55,11 @@ const MainPage = () => {
       <ContainerWrapper>
         <FlexWrapper>
           <LeftDivStyled>
-            <div>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -79,20 +84,28 @@ const MainPage = () => {
               <TypewriterWrapper ref={typewriterRef}>
                 <TypewriterEffect
                   texts={texts}
-                  interval={150}
+                  interval={230}
                   start={isInView}
                 />
               </TypewriterWrapper>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry standard dummy text
                 ever since the 1500s, when an unknown printer took a galley of
                 type and scrambled it to make a type specimen book.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.5 }}
+            >
               <ButtonWrapper
                 variant={{
                   BorderRadius: 8,
@@ -100,8 +113,11 @@ const MainPage = () => {
               >
                 Download CV
               </ButtonWrapper>
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 0.5 }}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -121,15 +137,21 @@ const MainPage = () => {
               <div>
                 <FaLinkedinIn size={"25px"} />
               </div>
-            </div>
+            </motion.div>
           </LeftDivStyled>
           <RightDivStyled>
-            <ImageStyled
-              src="/images/2.jpg"
-              alt="/images/HeroPlane.png"
-              width={500}
-              height={500}
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <ImageStyled
+                src="/images/2.jpg"
+                alt="/images/HeroPlane.png"
+                width={500}
+                height={500}
+              />
+            </motion.div>
           </RightDivStyled>
         </FlexWrapper>
       </ContainerWrapper>

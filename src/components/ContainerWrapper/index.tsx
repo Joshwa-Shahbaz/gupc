@@ -1,4 +1,4 @@
-import React, { ElementType, ReactNode } from "react";
+import React, { ElementType, ReactNode, forwardRef, Ref } from "react";
 import { ContainerWrapperStyled } from "./styled";
 
 type ContainerWrapperProps = {
@@ -7,16 +7,16 @@ type ContainerWrapperProps = {
   id?: string;
 };
 
-const ContainerWrapper: React.FC<ContainerWrapperProps> = ({
-  children,
-  as,
-  id,
-}) => {
-  return (
-    <ContainerWrapperStyled as={as} id={id}>
-      {children}
-    </ContainerWrapperStyled>
-  );
-};
+const ContainerWrapper = forwardRef<HTMLElement, ContainerWrapperProps>(
+  ({ children, as, id }, ref) => {
+    return (
+      <ContainerWrapperStyled as={as} id={id} ref={ref as Ref<HTMLElement>}>
+        {children}
+      </ContainerWrapperStyled>
+    );
+  }
+);
+
+ContainerWrapper.displayName = "ContainerWrapper";
 
 export default ContainerWrapper;
