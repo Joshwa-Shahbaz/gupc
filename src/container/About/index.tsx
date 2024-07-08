@@ -14,6 +14,8 @@ const ProgressData = [
   { Percentage: 50, Title: "Headless CMS" },
 ];
 
+const check = "changes in the file check";
+
 const AboutMe = () => {
   const [isInView, setIsInView] = useState(false);
   const aboutMeRef = useRef(null);
