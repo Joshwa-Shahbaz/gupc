@@ -1,12 +1,31 @@
 import styled from "styled-components";
 
 export const NavbarWrapperStyled = styled.div`
-  position: sticky;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-  text-align: center;
   align-items: center;
+  padding: 10px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.biggerMobile}px) {
+    padding: 15px 40px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding: 15px 60px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    padding: 20px 80px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraLarge}px) {
+    padding: 20px 100px;
+  }
 `;
 
 export const LogoStyled = styled.div`

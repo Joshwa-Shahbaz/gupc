@@ -45,7 +45,7 @@ const Navbar = () => {
     <ContainerWrapper>
       <NavbarWrapperStyled>
         <LogoStyled style={{ color: "#F2C274", fontSize: "35px" }}>
-          JOSH
+          GUPC
         </LogoStyled>
 
         <NavListStyled>
@@ -71,7 +71,7 @@ const Navbar = () => {
         </ToggleButtonWrapper>
 
         <ButtonContainer>
-          <ButtonWrapper variant={{ BorderRadius: 8 }}>Hire me</ButtonWrapper>
+          <ButtonWrapper variant={{ BorderRadius: 8 }}>Donate</ButtonWrapper>
         </ButtonContainer>
       </NavbarWrapperStyled>
 

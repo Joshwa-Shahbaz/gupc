@@ -1,15 +1,11 @@
-import ProgressBar from "@/components/UI/ProgressBar";
-import AboutMe from "@/container/About";
-import Gallery from "@/container/Gallery";
-import MainPage from "@/container/MainPage";
+import CustomCarousel from "@/components/UI/CustomCarousel";
+import HeroComp from "@/container/Hero";
 
 export default function Home() {
   return (
     <>
-      <MainPage />
-      <AboutMe />
-      <Gallery />
-      {/* <ProgressBar /> */}
+      <HeroComp />
+      {/* <CustomCarousel /> */}
     </>
   );
 }
