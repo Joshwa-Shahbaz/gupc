@@ -1,56 +1,89 @@
-import React, { useEffect, useRef, useState } from "react";
-// styles
-
-// react icons
+import React from "react";
+import {
+  ButtonStyled,
+  CardHeadStyled,
+  CardWrapperStyled,
+  ContentWrapperStyled,
+  DesciptionStyled,
+  FlexWrapper,
+  HeadingWrapperStyled,
+  PinnacleWrapperStyled,
+  ShadeStyled,
+} from "./styled";
 import ContainerWrapper from "@/components/ContainerWrapper";
-import { ServicesWrapperStyled } from "./styled";
-// container
+import { MdOutlineVolunteerActivism } from "react-icons/md";
+import { LiaDonateSolid } from "react-icons/lia";
+import { IoPeopleOutline } from "react-icons/io5";
 
-type ServicesSectionProps = {
-  data: {
-    mainHeading: string;
-    title: string;
-    ServicesContent: {
-      title: string;
-      description: string;
-      link: string;
-    }[];
-  };
-};
+const CardData = [
+  {
+    id: "1",
+    icon: <MdOutlineVolunteerActivism size={75} color="#F2C274" />,
+    heading: "Become A Volunteer",
+    desciption: `Whether you're starting with a blank canvas or you're in
+    need of a rebrand, our team carry the expertise to help
+    you level up! `,
+  },
+  {
+    id: "2",
+    icon: <LiaDonateSolid size={75} color="#F2C274" />,
+    heading: "Donate To Support",
+    desciption: ` Whether you're starting with a blank canvas or you're in
+    need of a rebrand, our team carry the expertise to help
+    you level up! `,
+  },
+  {
+    id: "3",
+    icon: <IoPeopleOutline size={75} color="#F2C274" />,
+    heading: "Become A partner",
+    desciption: `  Whether you're starting with a blank canvas or you're in
+    need of a rebrand, our team carry the expertise to help
+    you level up! `,
+  },
+];
 
-const Services: React.FC<ServicesSectionProps> = ({ data }) => {
-  const [inView, setInView] = useState(false);
-  const targetRef = useRef(null);
-
-  const handleIntersection: IntersectionObserverCallback = (entries) => {
-    if (entries[0].isIntersecting) {
-      setInView(true);
-    } else {
-      setInView(false);
-    }
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
-    });
-    const targetElement = targetRef.current;
-
-    if (targetElement) {
-      observer.observe(targetElement);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+const Services = () => {
   return (
-    <ServicesWrapperStyled id="services" ref={targetRef} view={inView}>
-      <ContainerWrapper>
-        <h1>check</h1>
-      </ContainerWrapper>
-    </ServicesWrapperStyled>
+    <ContainerWrapper>
+      <PinnacleWrapperStyled>
+        <HeadingWrapperStyled>
+          <div>
+            <h6
+              style={{
+                color: "#F2C274",
+                marginBottom: "20px",
+              }}
+            >
+              GET INVOLVED
+            </h6>
+          </div>
+          <div>
+            <h2>Let's Make A Difference Today</h2>
+          </div>
+        </HeadingWrapperStyled>
+        <FlexWrapper>
+          {CardData.map((data) => {
+            return (
+              <CardWrapperStyled key={data.id}>
+                <ShadeStyled />
+                <ContentWrapperStyled>
+                  <div>{data.icon}</div>
+                  <div>
+                    <CardHeadStyled>{data.heading}</CardHeadStyled>
+                  </div>
+                  <div>
+                    <DesciptionStyled>{data.desciption}</DesciptionStyled>
+                  </div>
+                </ContentWrapperStyled>
+                <div>
+                  <ButtonStyled>Learn more</ButtonStyled>
+                </div>
+              </CardWrapperStyled>
+            );
+          })}
+        </FlexWrapper>
+      </PinnacleWrapperStyled>
+    </ContainerWrapper>
   );
 };
 
