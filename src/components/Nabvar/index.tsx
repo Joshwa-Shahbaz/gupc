@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContainerWrapper from "../ContainerWrapper";
 import ButtonWrapper from "../UI/ButtonWrapper";
 import {
@@ -14,7 +14,9 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
   const List = [
     {
       navHead: "About Me",
@@ -34,21 +36,36 @@ const Navbar = () => {
     },
   ];
 
-  const handleScrollToSection = (id: string) => {
+  const handleScrollToSection = (id: any) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <ContainerWrapper>
-      <NavbarWrapperStyled>
+      <NavbarWrapperStyled scrolled={scrolled}>
         <LogoStyled style={{ color: "#F2C274", fontSize: "35px" }}>
           GUPC
         </LogoStyled>
 
-        <NavListStyled>
+        <NavListStyled scrolled={scrolled}>
           {List.map((item) => (
             <a
               style={{

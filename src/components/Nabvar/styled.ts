@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const NavbarWrapperStyled = styled.div`
+export const NavbarWrapperStyled = styled.div<{
+  scrolled: boolean;
+}>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +12,8 @@ export const NavbarWrapperStyled = styled.div`
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: ${({ scrolled }) => (scrolled ? "#ffff" : "transparent")};
+  transition: background-color 0.4s ease;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.biggerMobile}px) {
     padding: 15px 40px;
@@ -27,15 +31,17 @@ export const NavbarWrapperStyled = styled.div`
     padding: 20px 100px;
   }
 `;
-
 export const LogoStyled = styled.div`
   color: #f2c274;
   font-size: 35px;
 `;
 
-export const NavListStyled = styled.div`
+export const NavListStyled = styled.div<{
+  scrolled: boolean;
+}>`
   display: none;
-
+  color: ${({ scrolled }) => (scrolled ? "#000" : "#fff")};
+  font-weight: 500;
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     display: block;
     display: flex;

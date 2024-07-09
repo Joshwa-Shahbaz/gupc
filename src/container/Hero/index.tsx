@@ -60,7 +60,19 @@ const HeroComp = () => {
             <BackgroundImage3 />
           </SwiperSlide>
         </Swiper>
-        <CenteredText>Glories United Pentecostal Church</CenteredText>
+        <CenteredText>
+          <div>
+            <h1>Glorious United Pentecostal Church (GUPC)</h1>
+          </div>
+          <div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
+        </CenteredText>
         <IndicatorContainer>
           {[0, 1, 2].map((index) => (
             <IndicatorDot

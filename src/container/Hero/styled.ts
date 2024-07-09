@@ -33,7 +33,7 @@ export const BackgroundImage3 = styled.div`
   background-position: center;
 `;
 
-export const CenteredText = styled.h1`
+export const CenteredText = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,14 +43,20 @@ export const CenteredText = styled.h1`
   z-index: 10;
   font-family: Arial, sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  max-width: 860px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
   width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    width: 100%;
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    max-width: 860px;
+    padding: 0px;
   }
 `;
-
 
 export const IndicatorContainer = styled.div`
   position: absolute;

@@ -21,6 +21,7 @@ body {
   box-sizing: border-box;
   background-color: black;
   color: #ffff;
+  background-color: #ffff;
 }
 
 @layer utilities {
