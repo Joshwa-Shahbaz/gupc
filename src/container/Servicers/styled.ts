@@ -47,12 +47,12 @@ export const CardWrapperStyled = styled.div`
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background-color: #182438;
+    background-color: #000;
     color: #fff;
 
     ${ButtonStyled} {
-      color: #3992d4;
-      border: 1px solid #3992d4;
+      color: #f2c274;
+      border: 1px solid #f2c274;
     }
     ${ShadeStyled} {
       display: block;

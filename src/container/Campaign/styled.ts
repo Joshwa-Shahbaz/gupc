@@ -59,27 +59,6 @@ export const CardWrapperStyled = styled.div`
   gap: 20px;
 `;
 
-export const CardStyled = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.12);
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    min-height: 460px;
-    width: 48%;
-  }
-`;
-
-export const ImgColStyled = styled.div`
-  padding: 18px;
-  /* flex-grow: 1; */
-  display: flex;
-  align-items: center;
-`;
-
 export const ImageStyled = styled.img`
   width: 100%;
   border-radius: 22px;
@@ -90,4 +69,31 @@ export const ImageStyled = styled.img`
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     height: 350px;
   }
+`;
+
+export const CardStyled = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    min-height: 460px;
+    width: 48%;
+  }
+  &:hover {
+    ${ImageStyled} {
+      transform: scale(1.01);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+`;
+
+export const ImgColStyled = styled.div`
+  padding: 18px;
+  display: flex;
+  align-items: center;
 `;
