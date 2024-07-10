@@ -1,5 +1,6 @@
 import CustomCarousel from "@/components/UI/CustomCarousel";
 import AboutUs from "@/container/AboutUs";
+import Campaign from "@/container/Campaign";
 import HeroComp from "@/container/Hero";
 import Services from "@/container/Servicers";
 import { aboutUsData } from "@/site-data/main-page/AboutUs";
@@ -10,7 +11,8 @@ export default function Home() {
     <>
       <HeroComp />
       <AboutUs data={aboutUsData} />
-      <Services data={serviceData} />
+      <Services />
+      <Campaign />
       {/* <CustomCarousel /> */}
     </>
   );

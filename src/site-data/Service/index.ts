@@ -1,7 +1,6 @@
 export const serviceData = {
   mainHeading:
     "We're your trusted IT partner delivering tailored solutions that drive success.",
-  title: "Services",
   ServicesContent: [
     {
       title: "Web App Development",

@@ -19,19 +19,19 @@ const Navbar = () => {
 
   const List = [
     {
-      navHead: "About Me",
+      navHead: "Home",
       navLink: "about-me-section",
     },
     {
-      navHead: "Feautured works",
+      navHead: "Post",
       navLink: "",
     },
     {
-      navHead: "Resume",
+      navHead: "Articles",
       navLink: "",
     },
     {
-      navHead: "Expertise",
+      navHead: "Projects",
       navLink: "",
     },
   ];
@@ -88,7 +88,7 @@ const Navbar = () => {
         </ToggleButtonWrapper>
 
         <ButtonContainer>
-          <ButtonWrapper variant={{ BorderRadius: 8 }}>Donate</ButtonWrapper>
+          <ButtonWrapper variant={{ BorderRadius: 50 }}>Donate</ButtonWrapper>
         </ButtonContainer>
       </NavbarWrapperStyled>
 
