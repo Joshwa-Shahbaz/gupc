@@ -66,9 +66,9 @@ export const ImageStyled = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 0px;
+  border-radius: 22px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    border-radius: 22px;
     height: 350px;
   }
 `;
@@ -81,12 +81,12 @@ export const CardStyled = styled.div`
   flex-direction: column;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-  justify-content: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    min-height: 390px;
+    min-height: 350px;
     width: 48%;
   }
+
   &:hover {
     ${ImageStyled} {
       transform: scale(1.02);
@@ -95,8 +95,4 @@ export const CardStyled = styled.div`
   }
 `;
 
-export const ImgColStyled = styled.div`
-  padding: 0px 18px;
-  display: flex;
-  align-items: center;
-`;
+export const ImgColStyled = styled.div``;
