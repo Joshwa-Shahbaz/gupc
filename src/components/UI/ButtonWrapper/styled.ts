@@ -21,6 +21,7 @@ export const ButtonWrapperStyled = styled.button<{
   transition: 0.3s ease-in-out;
 
   &:hover {
-    background-color: #008ecc;
+    background: linear-gradient(45deg, #880808, #f2c274);
+    transition: 0.3s ease-in-out;
   }
 `;

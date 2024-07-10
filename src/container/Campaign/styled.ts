@@ -10,9 +10,10 @@ export const FlexColHeadingWrapperStyled = styled.div`
   }
 `;
 
-export const TitleHeadStyled = styled.h6`
+export const TitleHeadStyled = styled.h5`
   color: #f2c274;
   text-align: center;
+  font-weight: 500;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     text-align: left;
@@ -61,12 +62,13 @@ export const CardWrapperStyled = styled.div`
 
 export const ImageStyled = styled.img`
   width: 100%;
-  border-radius: 22px;
   box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   height: 100%;
   object-fit: cover;
+  border-radius: 0px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    border-radius: 22px;
     height: 350px;
   }
 `;
@@ -77,23 +79,24 @@ export const CardStyled = styled.div`
   border-radius: 18px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   justify-content: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    min-height: 460px;
+    min-height: 390px;
     width: 48%;
   }
   &:hover {
     ${ImageStyled} {
-      transform: scale(1.01);
+      transform: scale(1.02);
       transition: transform 0.5s ease-in-out;
     }
   }
 `;
 
 export const ImgColStyled = styled.div`
-  padding: 18px;
+  padding: 0px 18px;
   display: flex;
   align-items: center;
 `;

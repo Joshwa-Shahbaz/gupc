@@ -12,6 +12,8 @@ export const NavbarWrapperStyled = styled.div<{
   left: 0;
   right: 0;
   z-index: 1000;
+  border-bottom: ${({ scrolled }) =>
+    scrolled ? "1px solid #fff" : "transparent"};
   background-color: ${({ scrolled }) => (scrolled ? "#ffff" : "transparent")};
   transition: background-color 0.4s ease;
 

@@ -32,12 +32,12 @@ export const ShadeStyled = styled.div`
 
 export const CardWrapperStyled = styled.div`
   max-width: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 100%;
   padding: 41px 39px;
   border-radius: 14px;
   background: #fff;
@@ -47,7 +47,7 @@ export const CardWrapperStyled = styled.div`
   transition: 0.2s ease-in-out;
 
   &:hover {
-    background-color: #000;
+    background: linear-gradient(45deg, #880808, #f2c274);
     color: #fff;
 
     ${ButtonStyled} {

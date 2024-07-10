@@ -48,14 +48,14 @@ const Services = () => {
       <PinnacleWrapperStyled>
         <HeadingWrapperStyled>
           <div>
-            <h6
+            <h5
               style={{
                 color: "#F2C274",
                 marginBottom: "20px",
               }}
             >
               GET INVOLVED
-            </h6>
+            </h5>
           </div>
           <div>
             <h2>Let's Make A Difference Today</h2>

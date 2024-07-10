@@ -36,7 +36,13 @@ const Campaign: React.FC<CampaignProps> = ({ data }) => {
           </div>
           <MainHeadingWrapper>
             <LeftDivStyled>
-              <h1>{data.mainHeading}</h1>
+              <h2
+                style={{
+                  fontWeight: 500,
+                }}
+              >
+                {data.mainHeading}
+              </h2>
             </LeftDivStyled>
             <RightDivStyled>
               <ButtonWrapper variant={{ BorderRadius: 50 }}>
@@ -54,16 +60,6 @@ const Campaign: React.FC<CampaignProps> = ({ data }) => {
                   <ImgColStyled>
                     <ImageStyled src={item.image} alt="" />
                   </ImgColStyled>
-                  <div>
-                    <h4
-                      style={{
-                        padding: " 0px 18px 18px 18px",
-                        textAlign: "center",
-                      }}
-                    >
-                      {item.imageText}
-                    </h4>
-                  </div>
                 </CardStyled>
               </>
             );

@@ -144,3 +144,29 @@ export const ImageContainerStyled = styled.div`
     height: 500px;
   }
 `;
+
+export const CounterWrapper = styled.div`
+  display: none;
+  background-color: #f2c274;
+  position: absolute;
+  bottom: 160px;
+  width: 90%;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraLarge}px) {
+    display: block;
+    bottom: 50px;
+  }
+  @media (min-width: 1320px) {
+    bottom: 100px;
+  }
+  @media (min-width: 1350px) {
+    bottom: 90px;
+  }
+  @media (min-width: 1440px) {
+    bottom: 60px;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+    display: block;
+    bottom: 50px;
+  }
+`;
