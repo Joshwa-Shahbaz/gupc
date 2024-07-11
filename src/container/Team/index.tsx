@@ -1,12 +1,22 @@
 import React from "react";
 import {
+  Description,
   HeadingWrapperStyled,
+  IconContainer,
   ImageStyled,
   InfoCardStyled,
+  Name,
   PinnacleWrapperStyled,
   TeamCardStyled,
+  TeamWrapperStyled,
+  TextContainer,
+  Title,
 } from "./styled";
 import ContainerWrapper from "@/components/ContainerWrapper";
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import Link from "next/link";
 
 const Team = () => {
   return (
@@ -28,39 +38,31 @@ const Team = () => {
           </div>
         </HeadingWrapperStyled>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "50px",
-            gap: "33px",
-          }}
-        >
+        <TeamWrapperStyled>
           <TeamCardStyled>
             <ImageStyled
               src="https://cdn.prod.website-files.com/63ab89cf916d9b6c7c14fdc4/64c5b89f2cff33c4e4ee3085_Vanderbloemen.webp"
               alt=""
             />
-            <InfoCardStyled></InfoCardStyled>
-          </TeamCardStyled>{" "}
-          <TeamCardStyled>
-            <ImageStyled
-              src="https://images.squarespace-cdn.com/content/v1/5e0570fb0e908962eb5d5534/1577421528918-2UG0G1G3AP9IWHFGBUVL/MAP02003-Edit-2.jpg"
-              alt=""
-            />
-            <InfoCardStyled></InfoCardStyled>
-          </TeamCardStyled>{" "}
-          <TeamCardStyled>
-            <ImageStyled
-              src="https://www.bellanaija.com/wp-content/uploads/2014/09/Adeboye-NEW-BellaNaija.jpeg"
-              alt=""
-            />
-            <InfoCardStyled></InfoCardStyled>
+            <InfoCardStyled>
+              <TextContainer>
+                <Title>Director</Title>
+                <Name>Rev John William</Name>
+                <Description>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </Description>
+              </TextContainer>
+              <IconContainer>
+                <Link href={""}>
+                  <FaInstagram size={35} color="#f2c274" />
+                </Link>
+                <FaFacebookF size={35} color="#f2c274" />
+                <FaLinkedinIn size={35} color="#f2c274" />
+              </IconContainer>
+            </InfoCardStyled>
           </TeamCardStyled>
-        </div>
+        </TeamWrapperStyled>
       </PinnacleWrapperStyled>
     </ContainerWrapper>
   );

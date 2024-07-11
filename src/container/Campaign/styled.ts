@@ -6,7 +6,7 @@ export const FlexColHeadingWrapperStyled = styled.div`
   margin-top: 80px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    margin-top: 180px;
+    margin-top: 150px;
   }
 `;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const PinnacleWrapperStyled = styled.div`
   margin-top: 80px;
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    margin-top: 180px;
+    margin-top: 150px;
   }
 `;
 

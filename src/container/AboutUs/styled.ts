@@ -4,13 +4,12 @@ export const AboutUsWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 70px;
-
+  margin-top: 80px;
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     flex-direction: row;
     justify-content: space-between;
     gap: 10%;
-    padding-top: 151px;
+    margin-top: 150px;
   }
 `;
 
