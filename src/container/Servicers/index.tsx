@@ -58,7 +58,7 @@ const Services = () => {
             </h5>
           </div>
           <div>
-            <h3>Let's Make A Difference Today</h3>
+            <h3>Let Make A Difference Today</h3>
           </div>
         </HeadingWrapperStyled>
         <FlexWrapper>

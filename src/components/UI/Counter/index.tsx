@@ -42,13 +42,15 @@ const Counter: React.FC<CounterProps> = ({ data }) => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const currentRef = counterRef.current; // Copy the ref value
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

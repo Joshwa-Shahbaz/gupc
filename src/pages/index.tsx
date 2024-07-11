@@ -1,5 +1,4 @@
 import Banner from "@/components/UI/Banner";
-import CustomCarousel from "@/components/UI/CustomCarousel";
 import AboutUs from "@/container/AboutUs";
 import Campaign from "@/container/Campaign";
 import HeroComp from "@/container/Hero";
