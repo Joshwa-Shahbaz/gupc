@@ -36,13 +36,13 @@ const Campaign: React.FC<CampaignProps> = ({ data }) => {
           </div>
           <MainHeadingWrapper>
             <LeftDivStyled>
-              <h2
+              <h3
                 style={{
                   fontWeight: 500,
                 }}
               >
                 {data.mainHeading}
-              </h2>
+              </h3>
             </LeftDivStyled>
             <RightDivStyled>
               <ButtonWrapper variant={{ BorderRadius: 50 }}>

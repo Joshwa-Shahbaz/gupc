@@ -36,7 +36,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
         </HeadingMobileStyled>
         <LeftDivStyled>
           <ImageContainerStyled>
-            <ImageStyled src={data.image} alt={data.image} />
+            {data.image ? (
+              <ImageStyled src={data.image} alt={data.image} />
+            ) : (
+              <p>Image not available</p>
+            )}
           </ImageContainerStyled>
           <CounterWrapper>
             <Counter data={CounterData} />

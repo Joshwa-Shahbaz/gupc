@@ -51,7 +51,7 @@ const Team: React.FC<TeamProps> = ({ data }) => {
             </h5>
           </div>
           <div>
-            <h2>{data.mainHeading}</h2>
+            <h3>{data.mainHeading}</h3>
           </div>
         </HeadingWrapperStyled>
 

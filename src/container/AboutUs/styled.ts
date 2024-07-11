@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+// import Image from "next/image";
+
+// module.exports = {
+//   images: {
+//     domains: ["www.shutterstock.com"],
+//   },
+// };
+
 export const AboutUsWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,15 +48,10 @@ export const RightDivStyled = styled.div`
 `;
 
 export const ImageStyled = styled.img`
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 25% 0 0 0;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    width: 100%;
-    height: 100%;
-  }
 `;
 
 export const TitleStyled = styled.h5`

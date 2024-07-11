@@ -36,12 +36,12 @@ export const ColStyled = styled.div`
   flex-direction: column;
   gap: 20px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    width: 80%;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    width: 80%;
   }
 `;
 

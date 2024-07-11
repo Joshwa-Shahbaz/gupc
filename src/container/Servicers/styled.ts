@@ -45,6 +45,7 @@ export const CardWrapperStyled = styled.div`
   position: relative;
   overflow: hidden;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background: linear-gradient(45deg, #880808, #f2c274);

@@ -25,7 +25,7 @@ export const TeamData = {
       linkedIn: "https://www.google.com/",
     },
     {
-      id: 2,
+      id: 3,
       image:
         "https://wallpapers.com/images/hd/professional-profile-pictures-1500-x-2100-bvjgzg0cwa8r051t.jpg",
       title: "Director",

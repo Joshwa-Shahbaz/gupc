@@ -62,14 +62,32 @@ export const CardWrapperStyled = styled.div`
 
 export const ImageStyled = styled.img`
   width: 100%;
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
   height: 100%;
   object-fit: cover;
-  border-radius: 0px;
   border-radius: 22px;
+  z-index: -1;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     height: 350px;
+  }
+`;
+export const ImgColStyled = styled.div`
+  position: relative;
+  width: 100%;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    border-radius: 22px;
+    z-index: 2;
   }
 `;
 
@@ -81,18 +99,17 @@ export const CardStyled = styled.div`
   flex-direction: column;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
     rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  cursor: pointer;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     min-height: 350px;
     width: 48%;
   }
 
-  &:hover {
-    ${ImageStyled} {
-      transform: scale(1.02);
-      transition: transform 0.5s ease-in-out;
+  ${ImgColStyled} {
+    &:hover::after {
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      transition: 0.5s ease-in-out;
     }
   }
 `;
-
-export const ImgColStyled = styled.div``;
