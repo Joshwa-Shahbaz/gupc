@@ -6,7 +6,7 @@ import Services from "@/container/Servicers";
 import Team from "@/container/Team";
 import { CampaignData } from "@/site-data/Campaign";
 import { aboutUsData } from "@/site-data/main-page/AboutUs";
-import { serviceData } from "@/site-data/Service";
+import { TeamData } from "@/site-data/Team";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <AboutUs data={aboutUsData} />
       <Services />
       <Campaign data={CampaignData} />
-      <Team />
+      <Team data={TeamData} />
       {/* <CustomCarousel /> */}
     </>
   );
