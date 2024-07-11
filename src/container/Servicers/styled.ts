@@ -30,6 +30,16 @@ export const ShadeStyled = styled.div`
   z-index: -1;
 `;
 
+export const DesciptionStyled = styled.span`
+  flex-grow: 1;
+  color: #000;
+`;
+
+export const CardHeadStyled = styled.h5`
+  font-weight: 700;
+  color: #000;
+`;
+
 export const CardWrapperStyled = styled.div`
   max-width: 400px;
   height: 100%;
@@ -58,6 +68,9 @@ export const CardWrapperStyled = styled.div`
     ${ShadeStyled} {
       display: block;
     }
+    ${CardHeadStyled} {
+      color: #ffff;
+    }
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
@@ -77,12 +90,8 @@ export const ContentWrapperStyled = styled.div`
   gap: 14px;
 `;
 
-export const CardHeadStyled = styled.h5`
-  font-weight: 700;
-`;
-
-export const DesciptionStyled = styled.span`
-  flex-grow: 1;
+export const MainHeadStyled = styled.h3`
+  color: #fff;
 `;
 
 export const FlexWrapper = styled.div`

@@ -7,6 +7,7 @@ import {
   DesciptionStyled,
   FlexWrapper,
   HeadingWrapperStyled,
+  MainHeadStyled,
   PinnacleWrapperStyled,
   ShadeStyled,
 } from "./styled";
@@ -58,7 +59,7 @@ const Services = () => {
             </h5>
           </div>
           <div>
-            <h3>Let Make A Difference Today</h3>
+            <MainHeadStyled>Let Make A Difference Today</MainHeadStyled>
           </div>
         </HeadingWrapperStyled>
         <FlexWrapper>

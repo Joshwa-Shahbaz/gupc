@@ -39,6 +39,7 @@ const Campaign: React.FC<CampaignProps> = ({ data }) => {
               <h3
                 style={{
                   fontWeight: 500,
+                  color: "#000",
                 }}
               >
                 {data.mainHeading}

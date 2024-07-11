@@ -96,8 +96,10 @@ export const Title = styled.span`
 export const Name = styled.span`
   font-size: 22px;
   font-weight: 700;
+  color: #000;
 `;
 
 export const Description = styled.span`
   font-size: 16px;
+  color: #000;
 `;
