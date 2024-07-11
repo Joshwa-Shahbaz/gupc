@@ -5,6 +5,7 @@ import {
   IconContainer,
   ImageStyled,
   InfoCardStyled,
+  MainHeadStyled,
   Name,
   PinnacleWrapperStyled,
   TeamCardStyled,
@@ -51,7 +52,7 @@ const Team: React.FC<TeamProps> = ({ data }) => {
             </h5>
           </div>
           <div>
-            <h3>{data.mainHeading}</h3>
+            <MainHeadStyled>{data.mainHeading}</MainHeadStyled>
           </div>
         </HeadingWrapperStyled>
 

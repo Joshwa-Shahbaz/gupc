@@ -90,9 +90,7 @@ export const ContentWrapperStyled = styled.div`
   gap: 14px;
 `;
 
-export const MainHeadStyled = styled.h3`
-  color: #fff;
-`;
+export const MainHeadStyled = styled.h3``;
 
 export const FlexWrapper = styled.div`
   display: flex;

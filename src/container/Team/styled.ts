@@ -103,3 +103,7 @@ export const Description = styled.span`
   font-size: 16px;
   color: #000;
 `;
+
+export const MainHeadStyled = styled.h3`
+  color: #000;
+`;
