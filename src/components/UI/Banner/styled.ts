@@ -13,7 +13,7 @@ export const BannerWrapperStyled = styled.div<{
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   margin-top: 80px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
@@ -38,7 +38,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const TitleStyled = styled.h5`
-  color: #fff;
+  color: #f2c274;
 `;
 
 export const VerseStyled = styled.h6`
