@@ -12,6 +12,11 @@ export const HeadingWrapperStyled = styled.div`
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    gap: 20px;
+  }
 `;
 
 export const TeamWrapperStyled = styled.div`
@@ -20,11 +25,12 @@ export const TeamWrapperStyled = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
   gap: 150px;
 
   @media (min-width: 1316px) {
     gap: 33px;
+    margin-top: 50px;
   }
 `;
 

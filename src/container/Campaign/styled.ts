@@ -37,6 +37,9 @@ export const MainHeadingWrapper = styled.div`
 
 export const LeftDivStyled = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
     width: 60%;

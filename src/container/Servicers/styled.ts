@@ -99,11 +99,21 @@ export const FlexWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    margin-top: 50px;
+  }
 `;
+
 export const HeadingWrapperStyled = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
+    gap: 20px;
+  }
 `;

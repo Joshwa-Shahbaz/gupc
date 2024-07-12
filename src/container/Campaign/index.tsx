@@ -31,19 +31,21 @@ const Campaign: React.FC<CampaignProps> = ({ data }) => {
     <>
       <ContainerWrapper>
         <FlexColHeadingWrapperStyled>
-          <div>
-            <TitleHeadStyled>{data.title}</TitleHeadStyled>
-          </div>
           <MainHeadingWrapper>
             <LeftDivStyled>
-              <h3
-                style={{
-                  fontWeight: 500,
-                  color: "#000",
-                }}
-              >
-                {data.mainHeading}
-              </h3>
+              <div>
+                <TitleHeadStyled>{data.title}</TitleHeadStyled>
+              </div>
+              <div>
+                <h3
+                  style={{
+                    fontWeight: 500,
+                    color: "#000",
+                  }}
+                >
+                  {data.mainHeading}
+                </h3>
+              </div>
             </LeftDivStyled>
             <RightDivStyled>
               <ButtonWrapper variant={{ BorderRadius: 50 }}>

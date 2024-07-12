@@ -69,22 +69,10 @@ export const TitleStyled = styled.h5`
   }
 `;
 
-export const HeadingStyled = styled.h1`
+export const HeadingStyled = styled.h3`
   padding: 0;
   margin: 0;
   color: #22405e;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.largeScreen}px) {
-    line-height: 60px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.extraLarge}px) {
-    line-height: 60px;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}px) {
-    line-height: 70px;
-  }
 `;
 
 export const ParagraphStyled = styled.p`

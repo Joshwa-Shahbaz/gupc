@@ -45,7 +45,6 @@ const Team: React.FC<TeamProps> = ({ data }) => {
             <h5
               style={{
                 color: "#F2C274",
-                marginBottom: "20px",
               }}
             >
               {data.title}
