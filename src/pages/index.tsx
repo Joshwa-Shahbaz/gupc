@@ -1,6 +1,7 @@
 import Banner from "@/components/UI/Banner";
 import AboutUs from "@/container/AboutUs";
 import Campaign from "@/container/Campaign";
+import Form from "@/container/Form";
 import HeroComp from "@/container/Hero";
 import Services from "@/container/Servicers";
 import Team from "@/container/Team";
@@ -15,10 +16,11 @@ export default function Home() {
       <HeroComp />
       <AboutUs data={aboutUsData} />
       <Services />
-      <Banner data={BannerData1} />
-      {/* <Banner data={BannerData2} /> */}
+      <Banner data={BannerData2} />
       <Campaign data={CampaignData} />
       <Team data={TeamData} />
+      <Form />
+      {/* <Banner data={BannerData1} /> */}
     </>
   );
 }
