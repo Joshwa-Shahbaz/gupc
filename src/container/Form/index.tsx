@@ -1,13 +1,12 @@
-import React from "react";
 import ContainerWrapper from "@/components/ContainerWrapper";
-import { ButtonContainer } from "@/components/Nabvar/styled";
+import { GlassEffect } from "./styled";
 import ButtonWrapper from "@/components/UI/ButtonWrapper";
 
 const Form = () => {
   return (
-    <div className="mt-[180px] lg:mt-[240px]">
-      <ContainerWrapper>
-        <div className="mt-10">
+    <ContainerWrapper>
+      <div className="mt-[180px] lg:mt-[240px] relative flex flex-col items-center justify-center ">
+        <GlassEffect className="w-[100%] lg:w-[90%] absolute p-4">
           <div className="text-center font-bold">
             <h5 className="text-[#F2C274]">Contact Us</h5>
           </div>
@@ -59,17 +58,112 @@ const Form = () => {
               <div className="flex justify-center items-cente">
                 <ButtonWrapper
                   variant={{
-                    BorderRadius: 25,
+                    BorderRadius: 50,
                   }}
                 >
-                  Book Appoinment
+                  Book Appointment
                 </ButtonWrapper>
               </div>
             </div>
           </form>
+        </GlassEffect>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid gap-4">
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://www.donorkite.com/wp-content/uploads/2024/02/Group-744.png"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://www.churchtrac.com/articles/images/blog_the_state_of_church_giving_feature.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFiJkgpIC82hTBuLZhLJGZ6gAje6d4qabdurjAegQo50CfKwWPivOb5ZsUWdHSwq42qk&usqp=CAU"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://www.shutterstock.com/image-photo/charity-donation-box-collection-give-600nw-2148892269.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://www.shutterstock.com/image-photo/charity-donation-box-collection-give-600nw-2148892269.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTL4x-mAKH7DN3m51BgDK6F2PhMTiHPnyhmg&s"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://christian.net/wp-content/uploads/2024/02/what-covenant-is-made-in-baptism-1709180397.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_V-z5IVuXEbAazp-dk6tP_8owmAsfpK2TzA&s"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_V-z5IVuXEbAazp-dk6tP_8owmAsfpK2TzA&s"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://www.churchtrac.com/articles/images/blog_the_state_of_church_giving_feature.jpg"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKCzKRU0U7-rlqwc_EK7VLRfUWgudAmlUoug&s"
+                alt=""
+              />
+            </div>
+            <div className="w-full h-auto overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-lg"
+                src="https://images.squarespace-cdn.com/content/v1/5ca79f2016b64015238f489f/fb1900ef-e3c9-4142-9201-c3135ba0c6c7/Screen+Shot+2023-08-30+at+3.41.50+PM.png"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-      </ContainerWrapper>
-    </div>
+      </div>
+    </ContainerWrapper>
   );
 };
 

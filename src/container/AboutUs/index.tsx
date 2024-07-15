@@ -13,10 +13,7 @@ import {
   LeftDivStyled,
   RightDivStyled,
   ImageContainerStyled,
-  CounterWrapper,
 } from "./styled";
-import Counter from "@/components/UI/Counter";
-import { CounterData } from "@/site-data/Counter";
 
 // type
 type AboutUsProps = {
@@ -42,9 +39,6 @@ const AboutUs: React.FC<AboutUsProps> = ({ data }) => {
               <p>Image not available</p>
             )}
           </ImageContainerStyled>
-          <CounterWrapper>
-            <Counter data={CounterData} />
-          </CounterWrapper>
         </LeftDivStyled>
         <RightDivStyled>
           <HeadingDesktopStyled>

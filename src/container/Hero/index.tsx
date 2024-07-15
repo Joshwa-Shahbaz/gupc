@@ -11,6 +11,7 @@ import {
   CarouselWrapper,
   CenteredText,
 } from "./styled";
+import ButtonWrapper from "@/components/UI/ButtonWrapper";
 
 const HeroComp = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,6 +82,31 @@ const HeroComp = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+            }}
+          >
+            <div>
+              <ButtonWrapper
+                variant={{
+                  BorderRadius: 50,
+                }}
+              >
+                Donate Now
+              </ButtonWrapper>
+            </div>
+            <div>
+              <ButtonWrapper
+                variant={{
+                  BorderRadius: 50,
+                }}
+              >
+                Contact Us
+              </ButtonWrapper>
+            </div>
           </div>
         </CenteredText>
         <IndicatorContainer>
