@@ -1,17 +1,18 @@
 import React from "react";
 import {
+  CardBack,
+  CardFront,
+  CardInner,
   Description,
   HeadingWrapperStyled,
   IconContainer,
   ImageStyled,
-  InfoCardStyled,
-  MainHeadStyled,
   Name,
   PinnacleWrapperStyled,
   TeamCardStyled,
   TeamWrapperStyled,
-  TextContainer,
   Title,
+  MainHeadStyled,
 } from "./styled";
 import ContainerWrapper from "@/components/ContainerWrapper";
 import { FaInstagram } from "react-icons/fa6";
@@ -38,13 +39,13 @@ type TeamProps = {
 
 const Team: React.FC<TeamProps> = ({ data }) => {
   return (
-    <ContainerWrapper>
-      <PinnacleWrapperStyled>
+    <PinnacleWrapperStyled>
+      <ContainerWrapper>
         <HeadingWrapperStyled>
           <div>
             <h5
               style={{
-                color: "#F2C274",
+                color: "#FFF",
               }}
             >
               {data.title}
@@ -59,31 +60,36 @@ const Team: React.FC<TeamProps> = ({ data }) => {
           {data.teamCard.map((item) => {
             return (
               <TeamCardStyled key={item.id}>
-                <ImageStyled src={item.image} alt={item.image} />
-                <InfoCardStyled>
-                  <TextContainer>
+                <CardInner className="card-inner">
+                  {/* Front Side */}
+                  <CardFront>
+                    <ImageStyled src={item.image} alt={item.image} />
+                  </CardFront>
+
+                  {/* Back Side */}
+                  <CardBack>
                     <Title>{item.title}</Title>
                     <Name>{item.name}</Name>
                     <Description>{item.desc}</Description>
-                  </TextContainer>
-                  <IconContainer>
-                    <Link href={item.instagram} target="blank">
-                      <FaInstagram size={35} color="#f2c274" />
-                    </Link>
-                    <Link href={item.faceBook} target="blank">
-                      <FaFacebookF size={35} color="#f2c274" />
-                    </Link>
-                    <Link href={item.linkedIn} target="blank">
-                      <FaLinkedinIn size={35} color="#f2c274" />
-                    </Link>
-                  </IconContainer>
-                </InfoCardStyled>
+                    <IconContainer>
+                      <Link href={item.faceBook} passHref>
+                        <FaFacebookF size={"25px"} />
+                      </Link>
+                      <Link href={item.instagram} passHref>
+                        <FaInstagram size={"25px"} />
+                      </Link>
+                      <Link href={item.linkedIn} passHref>
+                        <FaLinkedinIn size={"25px"} />
+                      </Link>
+                    </IconContainer>
+                  </CardBack>
+                </CardInner>
               </TeamCardStyled>
             );
           })}
         </TeamWrapperStyled>
-      </PinnacleWrapperStyled>
-    </ContainerWrapper>
+      </ContainerWrapper>
+    </PinnacleWrapperStyled>
   );
 };
 

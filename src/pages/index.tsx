@@ -17,11 +17,11 @@ export default function Home() {
     <>
       <HeroComp />
       <AboutUs data={aboutUsData} />
-      <Services />
       <Banner data={BannerData2} />
+      <Services />
       {/* <Campaign data={CampaignData} /> */}
       {/* <TestBanner /> */}
-      {/* <Team data={TeamData} /> */}
+      <Team data={TeamData} />
       <Accordian />
       {/* <Form /> */}
     </>

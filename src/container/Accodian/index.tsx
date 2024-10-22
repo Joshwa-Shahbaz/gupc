@@ -51,6 +51,8 @@ const Accordion = () => {
     },
   };
 
+  // const heightCheck = document.getElementById("check");
+
   return (
     <ContainerWrapper>
       <AccordionContainer>
@@ -62,7 +64,7 @@ const Accordion = () => {
                 <AccordionTitle>{item.title}</AccordionTitle>
                 <AccordionIcon isOpen={activeIndex === index}>▼</AccordionIcon>
               </AccordionHeader>
-              <AccordionContent isOpen={activeIndex === index}>
+              <AccordionContent id="check" isOpen={activeIndex === index}>
                 <p>{item.content}</p>
               </AccordionContent>
             </AccordionItem>
