@@ -15,9 +15,9 @@ const TestBanner = () => {
       <ContainerWrapper>
         <FlexContainer>
           <TextContainer>
-            <Title>Discover the world's best coffee</Title>
+            <Title>Discover the worlds best coffee</Title>
             <Description>
-              From hand-picked farms to your cup, we source the finest beans and
+              From hand-picked farms to your cup we source the finest beans and
               roast them to perfection.
             </Description>
           </TextContainer>
